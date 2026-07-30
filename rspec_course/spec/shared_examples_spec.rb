@@ -1,10 +1,10 @@
 # Let's say we have contexts where all subjects have something in common
-# In this example they all shared the length method
+# In this example they all share the length method
 # If we were to test the same method like this:
 # it 'returns the number of items' do
 #   expect(subject.length).to eq(3)
 # end
-# There would be duplication of this piece of code across all contexts
+# There would be duplication of this piece of code across all contexts that need it
 # To solve this we can use a shared example. Keep in mind that in a real scenario
 # there would be a shared_examples_spec.rb file, separate from the other spec files
 # A common setup for this is editing spec_helper file to autoload everything under spec/support
