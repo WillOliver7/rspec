@@ -12,8 +12,8 @@ RSpec.describe 'change matcher' do
   end
 
   it 'accepts negative arguments' do
-    # Same problem here. Also, remember that subject is reloaded between contexts
-    # so, in here, it has 3 elements again, despite the changes made in the previous context
+    # Same problem here. Also, remember that subject is reloaded between assertions
+    # so, in here, it has 3 elements again, despite the changes made in the previous assertion
     # expect { subject.pop }.to change { subject.length }.from(3).to(2)
     expect { subject.pop }.to change { subject.length }.by(-1)
   end
